@@ -16,6 +16,19 @@ function UserBlog() {
   );
   const [mobileFragment, setMobileFragment] = useState("");
 
+  const fonts = [
+    "font-Poppins",
+    // "font-Railway",
+    "font-Playfair",
+    "font-Lora",
+    "font-Arvo",
+    "font-Orkney",
+    "font-Handlee",
+    "font-Delius",
+    "font-Patrick",
+  ];
+  const [currentFont, setCurrentFont] = useState(fonts[0]);
+
   useEffect(() => {
     const timeoutOpacity = setTimeout(() => {
       setVisible(true);
@@ -30,9 +43,15 @@ function UserBlog() {
       setMobileImage("w-28 h-28");
     }
 
+    const timer = setInterval(() => {
+      const randomIndex = Math.floor(Math.random() * fonts.length);
+      setCurrentFont(fonts[randomIndex]);
+    }, 200);
+
     return () => {
       clearTimeout(timeoutOpacity);
       clearTimeout(timeoutX);
+      clearInterval(timer);
     };
   }, []);
 
@@ -95,27 +114,19 @@ function UserBlog() {
 
       <div>
         <span
-          className={`flex font-Poppins font-semibold xl:text-2xl 2xl:text-3xl md:text-xs sm:text-sm 3xl:text-6xl mt-5 text-black-blue-dark`}
+          className={`flex ${currentFont} font-semibold xl:text-2xl 2xl:text-3xl md:text-xs sm:text-sm 3xl:text-6xl mt-5 text-black-blue-dark`}
         >
           0xpure
         </span>
       </div>
 
       <div>
-        <span className="flex xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-4xl font-Poppins font-semibold m-3 text-center">
+        <span className={`flex xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-4xl font-Poppins font-semibold m-3 text-center`}>
           17 y.o Fullstack/Python software developer
         </span>
       </div>
 
       <MobileFragmentFunction />
-
-      {/* <div>
-        <span className="flex xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-4xl font-Poppins font-semibold m-3 text-center">
-          This is not a full-fledged version of the site, to get acquainted with
-          the knowledge stack, projects, etc. either contact me or take a look
-          at the PC version of the site
-        </span>
-      </div> */}
 
       <div className="flex flex-col h-full justify-end items-center">
         <span className="xl:text-2xl 2xl:text-2xl md:text-xs sm:text-sm 3xl:text-5xl font-Poppins font-semibold">
