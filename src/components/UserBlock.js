@@ -41,11 +41,14 @@ function UserBlog() {
       setMobile(true);
       setMobileWidth("w-full p-3");
       setMobileImage("w-28 h-28");
+      setCurrentFont["font-Poppins"];
     }
 
     const timer = setInterval(() => {
-      const randomIndex = Math.floor(Math.random() * fonts.length);
-      setCurrentFont(fonts[randomIndex]);
+      if (isMobile == true) {
+        const randomIndex = Math.floor(Math.random() * fonts.length);
+        setCurrentFont(fonts[randomIndex]);
+      }
     }, 200);
 
     return () => {
@@ -121,7 +124,9 @@ function UserBlog() {
       </div>
 
       <div>
-        <span className={`flex xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-4xl font-Poppins font-semibold m-3 text-center`}>
+        <span
+          className={`flex xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-4xl font-Poppins font-semibold m-3 text-center`}
+        >
           17 y.o Fullstack/Python software developer
         </span>
       </div>

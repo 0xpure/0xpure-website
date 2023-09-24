@@ -21,11 +21,11 @@ function Project() {
           console.log(img);
           return (
             <div
-              className="group relative xl:h-64 xl:m-5 md:h-24 md:m-1"
+              className="group relative xl:h-64 xl:m-5 md:h-36 md:m-1"
               key={id}
             >
               <div
-                className="border cursor-pointer rounded-lg bg-cover bg-center xl:h-64 xl:w-96 md:h-24 md:w-36 transition duration-300 ease-in-out transform group-hover:opacity-70"
+                className="border cursor-pointer rounded-lg bg-cover bg-center xl:h-64 xl:w-96 md:h-36 md:w-44 transition duration-300 ease-in-out transform group-hover:opacity-70"
                 style={{ backgroundImage: `url(${img})` }}
               ></div>
               <div className="absolute rounded-lg cursor-pointer inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-300 ease-in-out"></div>

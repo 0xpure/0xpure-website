@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const UserBlog = React.lazy(() => import("./components/UserBlock"));
+const UserBlock = React.lazy(() => import("./components/UserBlock"));
 const MainContent = React.lazy(() => import("./components/MainContent"));
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
   return (
     <div className=" bg-periwinkle flex w-full h-full flex-col">
       <div className={`bg-periwinkle flex ${isMobile} w-full h-full`}>
-        <UserBlog />
+        <UserBlock />
         <MainContent />
       </div>
     </div>

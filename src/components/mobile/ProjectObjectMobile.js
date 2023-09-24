@@ -12,7 +12,6 @@ function ProjectMobile() {
           const colorStatus = isWorking
             ? "text-green-600"
             : "text-red-600" & "";
-          console.log(img);
           return (
             <div
               className="group relative m-2"

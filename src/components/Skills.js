@@ -1,35 +1,9 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import skills from "./Projects/skills";
 
 function Skills() {
   const [searchItem, setSearchTerm] = useState("");
-
-  const skills = [
-    "HTML/CSS/JS",
-    "Reactjs",
-    "Redux",
-    "Tailwindcss",
-    "Bootstrap",
-    "SCSS(Sass)",
-    "Webpack",
-    "Webpack dev server",
-    "Git",
-    "OOP",
-    "express.js",
-    "Mongodb",
-    "sqlite",
-    "nginx",
-    "apache",
-    "adaptive layout",
-    "cross-browser layout",
-    "JSON",
-    "Python 3",
-    "Django",
-    "BeautifulSoup4",
-    "requests",
-    "opencv",
-    "Tensorflow (still learning)",
-  ];
 
   const [filteredItems, setFilteredItems] = useState(skills);
 
@@ -52,24 +26,24 @@ function Skills() {
             <input
               type="text"
               placeholder="Search..."
-              className="w-full xl:m-4 xl:p-3 md:m-2 md:p-1 bg-periwinkle backdrop-brightness-50 rounded-md focus:outline-none "
+              className="w-full xl:text-xl xl:m-2 xl:p-2 font-Poppins font-semibold md:m-2 md:p-1 bg-periwinkle backdrop-brightness-50 rounded-md focus:outline-none "
               onChange={handleSearch}
             />
           </div>
         </div>
-        <div className="flex w-full flex-col justify-center h-full xl:p-2 md:p-0">
+        <div className="flex w-full flex-col justify-center h-3/4 overflow-y-scroll scrollbar overflow-x-hidden xl:p-2 md:p-0">
           <ul className=" grid grid-cols-2 h-full">
             {filteredItems.map((item, index) => (
               <li key={index} className="h-auto">
-                <span className="xl:text-lg 2xl:text-xl md:text-xs sm:text-sm 3xl:text-6xl text-vanilla xl:p-5 md:p-1">
+                <span className="xl:text-base 2xl:text-xl md:text-xs sm:text-sm 3xl:text-6xl text-vanilla xl:p-5 md:p-1">
                   {item}
                 </span>
               </li>
             ))}
           </ul>
         </div>
-        <div className="flex w-full justify-center xl:pt-2 md:pt-1">
-          <span className="text-vanilla xl:text-lg md:text-xs">
+        <div className="flex w-full justify-center xl:pt-2 md:pt-1 mt-auto">
+          <span className="text-vanilla xl:text-base md:text-xs">
             I hope this list will grow and the search button will not be useless
             (xd)
           </span>

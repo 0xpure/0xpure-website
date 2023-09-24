@@ -30,7 +30,7 @@ function MainContent() {
         currentOpacity ? "opacity-100" : "opacity-0 absolute"
       }`}
     >
-      <div className="flex flex-row xl:text-4xl 2xl:text-5xl md:text-xs sm:text-sm 3xl:text-8xl text-vanilla xl:pt-44 xl:pr-44 xl:pl-44 md:pt-8 md:pr-8 md:pl-8">
+      <div className="flex flex-row xl:text-4xl 2xl:text-5xl md:text-xs sm:text-sm 3xl:text-8xl text-vanilla xl:pt-36 xl:pr-36 xl:pl-36 md:pt-8 md:pr-8 md:pl-8">
         <div
           className="m-5 cursor-pointer hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-500 before:scale-x-0 before:bg-vanilla before:absolute before:bottom-0"
           onClick={() => setFragment(<About />)}

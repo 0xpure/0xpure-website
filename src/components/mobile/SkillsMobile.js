@@ -1,34 +1,8 @@
 import React, { useState } from "react";
+import skills from "../Projects/skills";
 
 function Skills() {
   const [searchItem, setSearchTerm] = useState("");
-
-  const skills = [
-    "HTML/CSS/JS",
-    "Reactjs",
-    "Redux",
-    "Tailwindcss",
-    "Bootstrap",
-    "SCSS(Sass)",
-    "Webpack",
-    "Webpack dev server",
-    "Git",
-    "OOP",
-    "express.js",
-    "Mongodb",
-    "sqlite",
-    "nginx",
-    "apache",
-    "adaptive layout",
-    "cross-browser layout",
-    "JSON",
-    "Python 3",
-    "Django",
-    "BeautifulSoup4",
-    "requests",
-    "opencv",
-    "Tensorflow",
-  ];
 
   const [filteredItems, setFilteredItems] = useState(skills);
 
@@ -56,7 +30,7 @@ function Skills() {
             />
           </div>
         </div>
-        <div className="flex w-full flex-col justify-center h-full xl:p-2 md:p-0">
+        <div className="flex w-full flex-col justify-center h-80 overflow-y-scroll xl:p-2 md:p-0">
           <ul className=" grid grid-cols-2 h-full">
             {filteredItems.map((item, index) => (
               <li key={index} className="h-auto flex justify-center">
@@ -67,7 +41,7 @@ function Skills() {
             ))}
           </ul>
         </div>
-        <div className="flex w-full justify-center xl:pt-2 md:pt-1">
+        <div className="flex w-full justify-center xl:pt-2 md:pt-1 mt-auto ">
           <span className="text-black-blue-dark font-Poppins font-semibold text-xs text-center">
             I hope this list will grow and the search button will not be useless
             (xd)
