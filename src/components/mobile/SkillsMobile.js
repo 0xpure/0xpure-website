@@ -18,7 +18,7 @@ function Skills() {
   };
 
   return (
-    <div className="flex w-full h-full xl:p-3 md:p-1 justify-center">
+    <div className="flex w-full xl:p-3 md:p-1 justify-center">
       <div className="flex w-full backdrop-brightness-95 p-2 xl:text-2xl 2xl:text-3xl md:text-xs sm:text-sm 3xl:text-6xl text-black-blue-dark flex-col rounded-lg">
         <div className="flex w-full ">
           <div className="flex flex-row w-full ">

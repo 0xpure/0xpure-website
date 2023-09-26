@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import avatar from "../img/av.jpg";
+import avatar from "../img/avatar1.jpg";
 import { useState, useEffect } from "react";
 
 const AboutMobile = React.lazy(() => import("./mobile/AboutMobile"));
@@ -98,7 +98,7 @@ function UserBlog() {
 
   return (
     <div
-      className={`z-10 overflow-y-hidden flex flex-col h-full ${isMobileWidth} items-center justify-start transform transition-all ease-in-out duration-1000 ${
+      className={`z-10 overflow-y-auto flex flex-col h-full ${isMobileWidth} items-center justify-start transform transition-all ease-in-out duration-1000 ${
         isVisible ? "absolute opacity-100" : " absolute opacity-0"
       }
       ${
@@ -117,7 +117,7 @@ function UserBlog() {
 
       <div>
         <span
-          className={`flex ${currentFont} font-semibold xl:text-2xl 2xl:text-3xl md:text-xs sm:text-sm 3xl:text-6xl mt-5 text-black-blue-dark`}
+          className={`flex ${currentFont} ${isMobile ? "font-bold" : "font-semibold"} xl:text-2xl 2xl:text-3xl md:text-xs sm:text-sm 3xl:text-6xl mt-5 text-black-blue-dark`}
         >
           0xpure
         </span>

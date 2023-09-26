@@ -22,7 +22,7 @@ const skills = [
   "BeautifulSoup4",
   "requests",
   "opencv",
-  "Tensorflow (still learning)",
+  "Tensorflow",
   "matplotlib",
   "pandas",
   "numpy",
