@@ -33,3 +33,44 @@
 .scrollbar::-webkit-scrollbar-track {
   background-color: rgb(183 192 238);
 }
+
+@keyframes borderGradient {
+  0% {
+    border-image-source: linear-gradient(to top, #63B3ED, #8B5CF6);
+  }
+  50% {
+    border-image-source: linear-gradient(to top, #8B5CF6, #63B3ED);
+  }
+  100% {
+    border-image-source: linear-gradient(to top, #63B3ED, #8B5CF6);
+  }
+}
+
+@keyframes borderGradient2 {
+  0% {
+    border-image-source: linear-gradient(to right, #ffcc29, #ff8a00);
+  }
+  33% {
+    border-image-source: linear-gradient(to bottom, #ff8a00, #ffcc29);
+  }
+  66% {
+    border-image-source: linear-gradient(to left, #ffcc29, #ff8a00);
+  }
+  100% {
+    border-image-source: linear-gradient(to top, #ffcc29, #ff8a00);
+  }
+}
+
+@layer utilities {
+  .border-gradient-blue-pink {
+    border-width: 0px 0px 0px 4px;
+    border-image-slice: 1;
+    animation: borderGradient 10s linear infinite;
+  }
+
+  .border-gradient {
+    border-width: 4px;
+    border-image-slice: 1;
+    animation: borderGradient 10s linear infinite;
+  }
+}

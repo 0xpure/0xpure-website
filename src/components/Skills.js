@@ -20,7 +20,7 @@ function Skills() {
 
   return (
     <div className="flex w-full h-full xl:p-3 md:p-1 justify-center">
-      <div className="flex w-full backdrop-brightness-95 p-8 xl:text-2xl 2xl:text-3xl md:text-xs sm:text-sm 3xl:text-6xl text-black-blue-dark flex-col rounded-lg">
+      <div className="flex w-full border-2 border-gradient backdrop-brightness-95 p-8 xl:text-2xl 2xl:text-3xl md:text-xs sm:text-sm 3xl:text-6xl text-black-blue-dark flex-col rounded-lg">
         <div className="flex w-full ">
           <div className="flex flex-row w-full ">
             <input
@@ -35,7 +35,7 @@ function Skills() {
           <ul className=" grid grid-cols-2 h-full">
             {filteredItems.map((item, index) => (
               <li key={index} className="h-auto">
-                <span className="xl:text-base 2xl:text-xl md:text-xs sm:text-sm 3xl:text-6xl text-vanilla xl:p-5 md:p-1">
+                <span className="xl:text-base 2xl:text-xl md:text-xs sm:text-sm 3xl:text-6xl font-Poppins font-light text-vanilla xl:p-5 md:p-1">
                   {item}
                 </span>
               </li>

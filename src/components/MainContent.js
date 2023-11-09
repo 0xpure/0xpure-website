@@ -26,31 +26,31 @@ function MainContent() {
 
   return (
     <div
-      className={`flex ${isHidden} bg-slate-blue w-3/4 h-full flex-col justify-center items-center transform transition-opacity ease-in-out duration-1000 ${
+      className={`flex ${isHidden} bg-slate-blue border-l-4 border-gradient-blue-pink border-black w-3/4 h-full flex-col justify-center items-center transform transition-opacity ease-in-out duration-1000 ${
         currentOpacity ? "opacity-100" : "opacity-0 absolute"
       }`}
     >
-      <div className="flex flex-row xl:text-4xl 2xl:text-5xl md:text-xs sm:text-sm 3xl:text-8xl text-vanilla xl:pt-36 xl:pr-36 xl:pl-36 md:pt-8 md:pr-8 md:pl-8">
+      <div className="flex flex-row xl:text-4xl 2xl:text-5xl md:text-xs sm:text-sm 3xl:text-8xl text-vanilla xl:pt-14 md:pt-5">
         <div
-          className="m-5 cursor-pointer hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-500 before:scale-x-0 before:bg-vanilla before:absolute before:bottom-0"
+          className="m-5 pt-2 cursor-pointer hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-500 before:scale-x-0 before:bg-vanilla before:absolute before:bottom-0"
           onClick={() => setFragment(<About />)}
         >
           <span>About</span>
         </div>
-        <div className="m-5">
+        <div className="m-5 p-2">
           <span>|</span>
         </div>
         <div
-          className="m-5 cursor-pointer hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-500 before:scale-x-0 before:bg-vanilla before:absolute before:bottom-0"
+          className="m-5 pt-2 cursor-pointer hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-500 before:scale-x-0 before:bg-vanilla before:absolute before:bottom-0"
           onClick={() => setFragment(<Skills />)}
         >
           <span>Skills</span>
         </div>
-        <div className="m-5">
+        <div className="m-5 p-2">
           <span>|</span>
         </div>
         <div
-          className="m-5 cursor-pointer hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-500 before:scale-x-0 before:bg-vanilla before:absolute before:bottom-0"
+          className="m-5 pt-2 cursor-pointer hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-500 before:scale-x-0 before:bg-vanilla before:absolute before:bottom-0"
           onClick={() => setFragment(<Portfolio />)}
         >
           <span>Portfolio</span>

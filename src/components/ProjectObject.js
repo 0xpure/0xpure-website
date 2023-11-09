@@ -24,24 +24,24 @@ function Project() {
               className="group relative xl:h-64 xl:m-5 md:h-36 md:m-1"
               key={id}
             >
-              <div
-                className="border cursor-pointer rounded-lg bg-cover bg-center xl:h-64 xl:w-96 md:h-36 md:w-44 transition duration-300 ease-in-out transform group-hover:opacity-70"
-                style={{ backgroundImage: `url(${img})` }}
-              ></div>
-              <div className="absolute rounded-lg cursor-pointer inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-300 ease-in-out"></div>
-              <div className="absolute inset-0 transition duration-300 ease-in-out group-hover:flex flex-col hidden justify-center items-center h-full">
-                <span className="xl:text-2xl 2xl:text-3xl md:text-xs sm:text-sm 3xl:text-6xl">
-                  <a href={url} target="_blank">
+              <a href={url} target="_blank">
+                <div
+                  className="border cursor-pointer rounded-lg bg-cover bg-center xl:h-64 xl:w-96 md:h-36 md:w-44 transition duration-300 ease-in-out transform group-hover:opacity-70"
+                  style={{ backgroundImage: `url(${img})` }}
+                ></div>
+                <div className="absolute rounded-lg cursor-pointer inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-300 ease-in-out"></div>
+                <div className="absolute inset-0 transition duration-300 ease-in-out group-hover:flex flex-col hidden justify-center items-center h-full">
+                  <span className="xl:text-2xl 2xl:text-3xl md:text-xs sm:text-sm 3xl:text-6xl">
                     {name}
-                  </a>
-                </span>
-                <span className="flex flex-col items-center xl:mt-3 md:mt-1">
-                  Current status:{" "}
-                  <span className={` ${colorStatus} text-center`}>
-                    {status}
                   </span>
-                </span>
-              </div>
+                  <span className="flex flex-col items-center xl:mt-3 md:mt-1">
+                    Current status:{" "}
+                    <span className={` ${colorStatus} text-center`}>
+                      {status}
+                    </span>
+                  </span>
+                </div>
+              </a>
             </div>
           );
         })}

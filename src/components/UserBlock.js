@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import avatar from "../img/avatar1.jpg";
+import avatar from "../img/avatar2.jpg";
 import { useState, useEffect } from "react";
 
 const AboutMobile = React.lazy(() => import("./mobile/AboutMobile"));
@@ -117,15 +117,17 @@ function UserBlog() {
 
       <div>
         <span
-          className={`flex ${currentFont} ${isMobile ? "font-bold" : "font-semibold"} xl:text-2xl 2xl:text-3xl md:text-xs sm:text-sm 3xl:text-6xl mt-5 text-black-blue-dark`}
+          className={`flex ${currentFont} ${
+            isMobile ? "font-bold" : "font-bold"
+          } xl:text-2xl 2xl:text-3xl md:text-xs sm:text-sm 3xl:text-6xl mt-5 text-black-blue-dark`}
         >
-          0xpure
+          pureheroky
         </span>
       </div>
 
       <div>
         <span
-          className={`flex xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-4xl font-Poppins font-semibold m-3 text-center`}
+          className={`flex xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-4xl font-Poppins font-normal m-3 text-center`}
         >
           17 y.o Fullstack/Python software developer
         </span>
@@ -134,11 +136,11 @@ function UserBlog() {
       <MobileFragmentFunction />
 
       <div className="flex flex-col h-full justify-end items-center">
-        <span className="xl:text-2xl 2xl:text-2xl md:text-xs sm:text-sm 3xl:text-5xl font-Poppins font-semibold">
+        <span className="xl:text-2xl 2xl:text-2xl md:text-xs sm:text-sm 3xl:text-5xl font-Poppins font-bold">
           Contacts:
         </span>
         <div className="font-Poppins font-thin flex flex-col">
-          <span className="flex justify-center xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-2xl ">
+          <span className="flex hover:font-extrabold justify-center xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-2xl ">
             Git:
             <a
               href="https://github.com/0xpure"
@@ -148,16 +150,19 @@ function UserBlog() {
               github.com/0xpure
             </a>
           </span>
-          <span className="flex justify-center xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-2xl">
+          <span className="flex hover:font-extrabold justify-center xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-2xl">
             Telegram:
-            <a href="https://t.me/pureheroky" target="_blank" className="pl-2">
+            <a href="https://t.me/psychopure" target="_blank" className="pl-2">
               t.me/pureheroky
             </a>
           </span>
-          <span className="flex justify-center xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-2xl">
-            Discord:<span className="pl-2">pureheroky</span>
+          <span className="flex hover:font-extrabold justify-center xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-2xl">
+            Discord:
+            <a href="https://discord.com/login" className="pl-2">
+              pureheroky
+            </a>
           </span>
-          <span className="flex justify-center xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-2xl">
+          <span className="flex hover:font-extrabold justify-center xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-2xl">
             Gmail:
             <a
               href="mailto:pureheroky@gmail.com"
