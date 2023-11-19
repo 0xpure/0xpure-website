@@ -55,9 +55,6 @@ function MainContent() {
         >
           <span>Portfolio</span>
         </div>
-        {/* <div className="m-5 cursor-pointer hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-500 before:scale-x-0 before:bg-vanilla before:absolute before:bottom-0">
-          <span>Price list</span>
-        </div> */}
       </div>
       <div className="flex w-full h-full justify-center items-center font-Orkney">
         <Suspense
