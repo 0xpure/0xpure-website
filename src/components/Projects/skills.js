@@ -22,11 +22,12 @@ const skills = [
   "BeautifulSoup4",
   "Requests",
   "Opencv",
-  "Next",
+  "Next js",
   "Prisma",
   "Matplotlib",
   "Pandas",
   "Numpy",
+  "Requests",
 ];
 
 export default skills;

@@ -2,15 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Poppins:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
 @import url("https://fonts.cdnfonts.com/css/orkney");
-@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Delius+Unicase&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap");
 
 .scrollbar {
   scrollbar-width: thin;
@@ -36,13 +37,13 @@
 
 @keyframes borderGradient {
   0% {
-    border-image-source: linear-gradient(to top, #63B3ED, #8B5CF6);
+    border-image-source: linear-gradient(to top, #63b3ed, #8b5cf6);
   }
   50% {
-    border-image-source: linear-gradient(to top, #8B5CF6, #63B3ED);
+    border-image-source: linear-gradient(to top, #8b5cf6, #63b3ed);
   }
   100% {
-    border-image-source: linear-gradient(to top, #63B3ED, #8B5CF6);
+    border-image-source: linear-gradient(to top, #63b3ed, #8b5cf6);
   }
 }
 
@@ -65,12 +66,12 @@
   .border-gradient-blue-pink {
     border-width: 0px 0px 0px 4px;
     border-image-slice: 1;
-    animation: borderGradient 10s linear infinite;
+    animation: borderGradient 4s linear infinite;
   }
 
   .border-gradient {
     border-width: 4px;
     border-image-slice: 1;
-    animation: borderGradient 10s linear infinite;
+    animation: borderGradient 4s linear infinite;
   }
 }

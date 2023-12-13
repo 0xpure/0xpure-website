@@ -27,8 +27,8 @@ module.exports = {
         paynegray: "#646881",
         periwinkle: "#B7C0EE",
         thistle: "#D1BECF",
-        "lavender": "#F7EBEC",
-        "aqua": "#73D2DE",
+        lavender: "#F7EBEC",
+        aqua: "#73D2DE",
         "slate-blue": "#7067CF",
       },
       backdropBrightness: {

@@ -8,21 +8,23 @@ const Portfolio = React.lazy(() => import("./Portfolio"));
 function MainContent() {
   const [CurrentFrag, setFragment] = useState("");
   const [currentOpacity, setOpacity] = useState(false);
-  const [isHidden, setHidden] = useState("")
+  const [isHidden, setHidden] = useState("");
 
   useEffect(() => {
     const animationTimeout = setTimeout(() => {
       setOpacity(true);
     }, 3000);
 
-    if (window.matchMedia('only screen and (max-width: 760px)').matches) {
-      setHidden("hidden")
-    }
+    const timer = setInterval(() => {
+      if (window.matchMedia("only screen and (max-width: 760px)").matches) {
+        setHidden("hidden");
+      } else {
+        setHidden("");
+      }
+    }, 200);
 
     return () => clearTimeout(animationTimeout);
   }, []);
-
-
 
   return (
     <div

@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function About() {
+  const [randomString, setRandomString] = useState("");
+
+  useEffect(() => {
+    const generateRandomString = () => {
+      const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+      let newString = "";
+      for (let i = 0; i < 5; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        newString += characters.charAt(randomIndex);
+      }
+      setRandomString(newString);
+    };
+
+    generateRandomString();
+    const intervalId = setInterval(generateRandomString, 25);
+
+    return () => clearInterval(intervalId);
+  }, []);
   return (
     <div className="flex w-full h-full xl:p-24 md:p-2 justify-center">
-      <div className="flex border-2 border-gradient w-full backdrop-brightness-95 p-8 xl:text-2xl 2xl:text-2xl md:text-xs sm:text-sm 3xl:text-6xl text-vanilla rounded-lg">
+      <div className="flex border-2 border-gradient w-full backdrop-brightness-95 p-8 xl:text-xl 2xl:text-2xl md:text-xs sm:text-base text-xs text-vanilla rounded-lg">
         <div className="flex h-full justify-center flex-col font-light font-Poppins">
           <span>
-            <span className="font-bold">Name:</span> Arseniy.
+            <span className="font-bold">Name: </span>
+            <span className="italic">{randomString}</span> .
           </span>
           <span>
             <span className="font-bold mr-2">Age:</span> 17.

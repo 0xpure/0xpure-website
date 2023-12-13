@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import avatar from "../img/avatar2.jpg";
+import avatar from "../img/avatar3.jpg";
 import { useState, useEffect } from "react";
 
 const AboutMobile = React.lazy(() => import("./mobile/AboutMobile"));
@@ -12,13 +12,13 @@ function UserBlog() {
   const [isMobile, setMobile] = useState(false);
   const [isMobileWidth, setMobileWidth] = useState("w-1/4 p-8");
   const [isMobileImage, setMobileImage] = useState(
-    "xl:w-52 xl:h-52 2xl:w-60 2xl:h-60 md:w-24 md:h-24 3xl:w-80 3xl:h-80 sm:w-24 sm:h-24"
+    "xl:w-52 xl:h-52 2xl:w-60 2xl:h-60 md:w-24 md:h-24 3xl:w-80 3xl:h-80 sm:w-24 sm:h-24 w-20 h-20"
   );
   const [mobileFragment, setMobileFragment] = useState("");
+  const [randomString, setRandomString] = useState("");
 
   const fonts = [
     "font-Poppins",
-    // "font-Railway",
     "font-Playfair",
     "font-Lora",
     "font-Arvo",
@@ -37,14 +37,19 @@ function UserBlog() {
       setX(true);
     }, 2000);
 
-    if (window.matchMedia("only screen and (max-width: 760px)").matches) {
-      setMobile(true);
-      setMobileWidth("w-full p-3");
-      setMobileImage("w-28 h-28");
-      setCurrentFont["font-Poppins"];
-    }
-
     const timer = setInterval(() => {
+      if (window.matchMedia("only screen and (max-width: 760px)").matches) {
+        setMobile(true);
+        setMobileWidth("w-full p-3");
+        setMobileImage("w-28 h-28");
+        setCurrentFont["font-Poppins"];
+      } else {
+        setMobile(false);
+        setMobileWidth("w-1/4 p-8");
+        setMobileImage(
+          "xl:w-52 xl:h-52 2xl:w-60 2xl:h-60 md:w-24 md:h-24 3xl:w-80 3xl:h-80 sm:w-24 sm:h-24 w-20 h-20"
+        );
+      }
       if (isMobile == true) {
         const randomIndex = Math.floor(Math.random() * fonts.length);
         setCurrentFont(fonts[randomIndex]);
@@ -65,7 +70,7 @@ function UserBlog() {
           <Suspense fallback={<div>Loading...</div>}>
             <div className="flex justify-center flex-row">
               <span
-                className="p-2 font-Poppins text-black-blue-dark-darker font-semibold"
+                className="p-2 cursor-pointer font-Poppins text-black-blue-dark-darker font-semibold"
                 onClick={() => {
                   setMobileFragment(<AboutMobile />);
                 }}
@@ -73,7 +78,7 @@ function UserBlog() {
                 About
               </span>
               <span
-                className="p-2 font-Poppins text-black-blue-dark-darker font-semibold"
+                className="p-2 cursor-pointer font-Poppins text-black-blue-dark-darker font-semibold"
                 onClick={() => {
                   setMobileFragment(<SkillsMobile />);
                 }}
@@ -81,7 +86,7 @@ function UserBlog() {
                 Skills
               </span>
               <span
-                className="p-2 font-Poppins text-black-blue-dark-darker font-semibold"
+                className="p-2 cursor-pointer font-Poppins text-black-blue-dark-darker font-semibold"
                 onClick={() => {
                   setMobileFragment(<PortfolioMobile />);
                 }}
@@ -98,7 +103,7 @@ function UserBlog() {
 
   return (
     <div
-      className={`z-10 overflow-y-auto flex flex-col h-full ${isMobileWidth} items-center justify-start transform transition-all ease-in-out duration-1000 ${
+      className={`z-10 overflow-y-auto flex overflow-hidden flex-col h-full ${isMobileWidth} items-center justify-start transform transition-all ease-in-out duration-1000 ${
         isVisible ? "absolute opacity-100" : " absolute opacity-0"
       }
       ${
@@ -119,7 +124,7 @@ function UserBlog() {
         <span
           className={`flex ${currentFont} ${
             isMobile ? "font-bold" : "font-bold"
-          } xl:text-2xl 2xl:text-3xl md:text-xs sm:text-sm 3xl:text-6xl mt-5 text-black-blue-dark`}
+          } xl:text-2xl 2xl:text-3xl md:text-xs sm:text-sm 3xl:text-6xl text-base mt-5 text-black-blue-dark`}
         >
           pureheroky
         </span>
@@ -127,7 +132,7 @@ function UserBlog() {
 
       <div>
         <span
-          className={`flex xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-4xl font-Poppins font-normal m-3 text-center`}
+          className={`flex xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-4xl text-sm font-Poppins font-normal m-3 text-center`}
         >
           17 y.o Fullstack/Python software developer
         </span>
@@ -136,33 +141,33 @@ function UserBlog() {
       <MobileFragmentFunction />
 
       <div className="flex flex-col h-full justify-end items-center">
-        <span className="xl:text-2xl 2xl:text-2xl md:text-xs sm:text-sm 3xl:text-5xl font-Poppins font-bold">
-          Contacts:
+        <span className="xl:text-2xl 2xl:text-3xl md:text-xs sm:text-sm 3xl:text-5xl text-base font-Poppins font-bold">
+          socials:
         </span>
         <div className="font-Poppins font-thin flex flex-col">
-          <span className="flex hover:font-extrabold justify-center xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-2xl ">
+          <span className="flex hover:font-extrabold justify-center xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-2xl text-xs">
             Git:
             <a
-              href="https://github.com/0xpure"
+              href="https://github.com/pureheroky"
               target="_blank"
               className="pl-2"
             >
-              github.com/0xpure
+              github.com/pureheroky
             </a>
           </span>
-          <span className="flex hover:font-extrabold justify-center xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-2xl">
+          <span className="flex hover:font-extrabold justify-center xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-2xl text-xs">
             Telegram:
             <a href="https://t.me/psychopure" target="_blank" className="pl-2">
               t.me/pureheroky
             </a>
           </span>
-          <span className="flex hover:font-extrabold justify-center xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-2xl">
+          <span className="flex hover:font-extrabold justify-center xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-2xl text-xs">
             Discord:
             <a href="https://discord.com/login" className="pl-2">
               pureheroky
             </a>
           </span>
-          <span className="flex hover:font-extrabold justify-center xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-2xl">
+          <span className="flex hover:font-extrabold justify-center xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-2xl text-xs">
             Gmail:
             <a
               href="mailto:pureheroky@gmail.com"

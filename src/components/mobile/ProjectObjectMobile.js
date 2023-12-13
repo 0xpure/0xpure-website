@@ -8,15 +8,28 @@ function ProjectMobile() {
       <div className={`flex flex-col w-full h-80 overflow-y-scroll`}>
         {Object.keys(ProjectList).map((prj) => {
           const prData = ProjectList[prj];
-          const [name, url, img, status, id, isWorking] = prData;
-          const colorStatus = isWorking
-            ? "text-green-600"
-            : "text-red-600" & "";
+          const [name, url, img, status, id, isWorking, date, description] =
+            prData;
+          let colorStatus;
+          switch (isWorking) {
+            case undefined:
+              colorStatus = "text-aqua";
+              break;
+            case true:
+              colorStatus = "text-green-600";
+              break;
+            case false:
+              colorStatus = "text-red-600";
+              break;
+            case null:
+              colorStatus = "text-sky-400";
+              break;
+          }
+          if (status == "If you're on the site now,\n it's probably working") {
+            colorStatus = "";
+          }
           return (
-            <div
-              className="group relative m-2"
-              key={id}
-            >
+            <div className="group relative m-2" key={id}>
               <div
                 className="border cursor-pointer rounded-lg bg-cover bg-center h-36 transition duration-300 ease-in-out transform group-hover:opacity-70"
                 style={{ backgroundImage: `url(${img})` }}

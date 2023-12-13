@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function AboutMobile() {
+  const [randomString, setRandomString] = useState("");
+
+  useEffect(() => {
+    const generateRandomString = () => {
+      const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+      let newString = "";
+      for (let i = 0; i < 5; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        newString += characters.charAt(randomIndex);
+      }
+      setRandomString(newString);
+    };
+
+    generateRandomString();
+    const intervalId = setInterval(generateRandomString, 25);
+
+    return () => clearInterval(intervalId);
+  }, []);
   return (
     <div className="flex w-full p-2 justify-center">
       <div className="flex w-full backdrop-brightness-95 p-2 text-base text-black-blue-dark font-semibold rounded-lg">
         <div className="flex flex-col">
-          <span>Name: Arseniy.</span>
+          <span>
+            Name: <span className="italic">{randomString}</span>.
+          </span>
           <span>Age: 17.</span>
           <span>Hometown: Penza, Russia.</span>
           <span>
