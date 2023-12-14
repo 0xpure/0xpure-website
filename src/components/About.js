@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useSpring, animated } from "@react-spring/web";
 
 function About() {
   const [randomString, setRandomString] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    toggleVisibility();
     const generateRandomString = () => {
       const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
       let newString = "";
@@ -19,8 +22,21 @@ function About() {
 
     return () => clearInterval(intervalId);
   }, []);
+
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
+
+  const springs = useSpring({
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? "translateX(0)" : "translateX(50%)",
+  });
+
   return (
-    <div className="flex w-full h-full xl:p-24 md:p-2 justify-center">
+    <animated.div
+      style={springs}
+      className="flex w-full h-full xl:p-24 md:p-2 justify-center"
+    >
       <div className="flex border-2 border-gradient w-full backdrop-brightness-95 p-8 xl:text-xl 2xl:text-2xl md:text-xs sm:text-base text-xs text-vanilla rounded-lg">
         <div className="flex h-full justify-center flex-col font-light font-Poppins">
           <span>
@@ -54,7 +70,7 @@ function About() {
           </span>
         </div>
       </div>
-    </div>
+    </animated.div>
   );
 }
 

@@ -28,7 +28,7 @@ function MainContent() {
 
   return (
     <div
-      className={`flex ${isHidden} bg-slate-blue border-l-4 border-gradient-blue-pink border-black w-3/4 h-full flex-col justify-center items-center transform transition-opacity ease-in-out duration-1000 ${
+      className={`flex ${isHidden} bg-slate-blue border-l-4 overflow-hidden border-gradient-blue-pink border-black w-3/4 h-full flex-col justify-center items-center transform transition-opacity ease-in-out duration-1000 ${
         currentOpacity ? "opacity-100" : "opacity-0 absolute"
       }`}
     >

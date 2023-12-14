@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useSpring, animated } from "@react-spring/web";
 import skills from "../Projects/skills";
 
 function Skills() {
   const [searchItem, setSearchTerm] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
 
   const [filteredItems, setFilteredItems] = useState(skills);
 
@@ -17,8 +19,25 @@ function Skills() {
     setFilteredItems(filteredItems);
   };
 
+  useEffect(() => {
+    toggleVisibility();
+  }, []);
+
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
+
+  const springs = useSpring({
+    height: "90%",
+    from: { height: "0%" },
+    config: { duration: 1000 },
+  });
+
   return (
-    <div className="flex w-full xl:p-3 md:p-1 justify-center">
+    <animated.div
+      style={springs}
+      className="flex w-full xl:p-3 md:p-1 justify-center"
+    >
       <div className="flex w-full backdrop-brightness-95 p-2 xl:text-2xl 2xl:text-3xl md:text-xs sm:text-sm 3xl:text-6xl text-black-blue-dark flex-col rounded-lg">
         <div className="flex w-full ">
           <div className="flex flex-row w-full ">
@@ -48,7 +67,7 @@ function Skills() {
           </span>
         </div>
       </div>
-    </div>
+    </animated.div>
   );
 }
 

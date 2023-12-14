@@ -15,7 +15,18 @@ function App() {
       setMobile("flex-col");
     }
 
-    return () => clearTimeout(timeout);
+    const inter = setInterval(() => {
+      if (window.matchMedia("only screen and (max-width: 760px)").matches) {
+        setMobile("flex-col");
+      } else {
+        setMobile("flex-row");
+      }
+    }, 100);
+
+    return () => {
+      clearTimeout(timeout);
+      clearInterval(inter);
+    };
   }, [jusitfy]);
 
   return (

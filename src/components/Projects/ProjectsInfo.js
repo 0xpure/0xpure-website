@@ -13,7 +13,7 @@ const ProjectList = {
     1,
     true,
     "24.12.2022",
-    "Description",
+    "Made by using Reactjs/tailwind css, server on nginx, hosted on beget.ru and advertised by direct.yandex.ru.\nWebsite has a minimalistic design with all important information for possible client with buttons for quickly navigate between fragments.",
   ],
   p2: [
     "pureheroky website",
@@ -23,7 +23,7 @@ const ProjectList = {
     2,
     undefined,
     "23.09.2023",
-    "Description",
+    "A site written about me and my skills/projects\nit was written using React/tailwindcss/react spring",
   ],
   p3: [
     "PURESERVER (Minecraft)",
@@ -33,7 +33,7 @@ const ProjectList = {
     3,
     undefined,
     "19.11.2023",
-    "Description",
+    "Minecraft plugin written using spigot. The plugin will be responsible for server logistics, etc. \n\nOnce completed, here will be the server address in the game",
   ],
   pr4: [
     "Telegram bot",
@@ -43,7 +43,7 @@ const ProjectList = {
     4,
     null,
     "19.11.2023",
-    "Description",
+    "Telegram bot that showing my knowledge stack/projects/latest commits.\nUsed tools: Python and telegram-bot-api.\n\n\nP.S It is not yet known whether a server will be allocated for this bot.",
   ],
   pr5: [
     "Palomaresbooks.ru",
@@ -53,7 +53,7 @@ const ProjectList = {
     5,
     undefined,
     "28.10.2023",
-    "Description",
+    "Website for one author from Russia.\nThe site is a page with books, clicking on which opens the page of the selected book. On the book page you can see its description, introductory chapter, and sometimes a trailer. There are also pages with support and contacts. ",
   ],
 };
 

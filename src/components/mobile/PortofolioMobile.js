@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useSpring, animated } from "@react-spring/web";
 
 const Projects = React.lazy(() => import("./ProjectObjectMobile"));
 
 function PortfolioMobile() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    toggleVisibility();
+  }, []);
+
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
+
+  const springs = useSpring({
+    height: "90%",
+    from: { height: "0%" },
+    config: { duration: 1000 },
+  });
+
   return (
-    <div className="flex w-full p-2 justify-center">
+    <animated.div style={springs} className="flex w-full p-2 justify-center">
       <div className="flex w-full backdrop-brightness-95 p-4 text-base text-vanilla flex-col rounded-lg">
         <div className="flex justify-center items-center flex-col">
           <span className="text-base">websites/projects that i made</span>
@@ -18,7 +35,7 @@ function PortfolioMobile() {
         </div>
         <div className="flex items-center">{<Projects />}</div>
       </div>
-    </div>
+    </animated.div>
   );
 }
 

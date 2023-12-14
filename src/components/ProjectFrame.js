@@ -70,7 +70,7 @@ export default function ProjectFrame({
                 <span className="font-Poppins 2xl:text-xl xl:text-lg md:text-xs text-xs text-vanilla text-center">
                   Description:
                 </span>
-                <span className="font-Poppins 2xl:text-xl xl:text-lg md:text-xs text-xs text-vanilla text-center">
+                <span className="font-Poppins pt-2 whitespace-pre-line 2xl:text-xl xl:text-lg md:text-xs text-xs text-vanilla text-center">
                   {projectDesc}
                 </span>
                 <a
