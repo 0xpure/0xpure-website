@@ -29,7 +29,7 @@ export default function ProjectFrame({
 
   return (
     <animated.div
-      className="absolute w-full h-full backdrop-filter z-20"
+      className="absolute w-full h-full z-20"
       style={springs}
     >
       <div className="absolute w-full h-full inset-0">

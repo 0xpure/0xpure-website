@@ -15,7 +15,7 @@ function MainContent() {
       setOpacity(true);
     }, 3000);
 
-    const timer = setInterval(() => {
+    setInterval(() => {
       if (window.matchMedia("only screen and (max-width: 900px)").matches) {
         setHidden("hidden");
       } else {

@@ -4,6 +4,7 @@ import pr3 from "./pr3-min.png";
 import pr4 from "./pr4-min.png";
 import pr5 from "./pr5-min.png";
 import pr6 from "./pr6-min.png";
+import pr7 from "./pr7-min.jpg";
 
 const ProjectList = {
   pr1: [
@@ -68,14 +69,14 @@ const ProjectList = {
   ],
 
   pr7: [
-    "Chat application (c# WPF / golang)",
+    "Chat application (Reactjs/Electron)",
     "https://github.com/pureheroky/chat-app-go",
-    pr6,
+    pr7,
     "in develop",
     7,
     undefined,
     "27.12.2023",
-    "Chat application, built on C# WPF as the frontend of the application and golang on the backend.\nCan be used to send messages or photos, requiring login/registration.\none of my most ambitious projects\n\nP.S It is not yet known whether a server will be allocated for this app.",
+    "Chat application, built on Electron as the frontend of the application and golang on the backend.\nCan be used to send messages or photos, requiring login/registration.\none of my most ambitious projects\n\nP.S It is not yet known whether a server will be allocated for this app.",
   ],
 };
 

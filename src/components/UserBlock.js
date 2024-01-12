@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import avatar from "./img/avatar4.jpg";
+import avatar from "./img/avatar4.png";
 import { useState, useEffect } from "react";
 
 const AboutMobile = React.lazy(() => import("./mobile/AboutMobile"));

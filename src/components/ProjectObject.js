@@ -75,13 +75,13 @@ function Project() {
 
           return (
             <div
-              className="group relative h-[260px] w-80 2xl:w-96 2xl:h-60 xl:m-5 md:h-44 md:m-1 m-0"
+              className="group relative h-[260px] w-64 lg:w-80 2xl:w-[500px] 2xl:h-60 xl:m-5 md:h-44 md:m-1 m-0"
               key={id}
             >
               {isMobile ? (
                 <a href={url} target="_blank" rel="noreferrer">
                   <div
-                    className="border cursor-pointer rounded-lg bg-cover bg-center h-[260px] w-80 2xl:w-96 md:h-44 2xl:h-60  transition duration-300 ease-in-out transform group-hover:opacity-70"
+                    className="border cursor-pointer rounded-lg bg-cover bg-center h-[260px] w-64 lg:w-80 2xl:w-[500px] md:h-44 2xl:h-60 transition duration-300 ease-in-out transform group-hover:opacity-70"
                     style={{ backgroundImage: `url(${img})` }}
                   ></div>
                   <div className="absolute h-full rounded-lg cursor-pointer inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-300 ease-in-out"></div>
@@ -114,7 +114,7 @@ function Project() {
                   className="cursor-pointer"
                 >
                   <div
-                    className="border cursor-pointer rounded-lg bg-cover bg-center h-[240px] w-80 2xl:w-96 md:h-44 2xl:h-60 transition duration-300 ease-in-out transform group-hover:opacity-70"
+                    className="border cursor-pointer rounded-lg bg-cover bg-center h-[240px] w-64 lg:w-80 2xl:w-[500px] md:h-44 2xl:h-60 transition duration-300 ease-in-out transform group-hover:opacity-70"
                     style={{ backgroundImage: `url(${img})` }}
                   ></div>
                   <div className="absolute h-full rounded-lg cursor-pointer inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-300 ease-in-out"></div>
