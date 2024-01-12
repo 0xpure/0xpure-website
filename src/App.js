@@ -11,12 +11,12 @@ function App() {
     const timeout = setTimeout(() => {
       setJustify(true);
     }, 500);
-    if (window.matchMedia("only screen and (max-width: 760px)").matches) {
+    if (window.matchMedia("only screen and (max-width: 900px)").matches) {
       setMobile("flex-col");
     }
 
     const inter = setInterval(() => {
-      if (window.matchMedia("only screen and (max-width: 760px)").matches) {
+      if (window.matchMedia("only screen and (max-width: 900px)").matches) {
         setMobile("flex-col");
       } else {
         setMobile("flex-row");

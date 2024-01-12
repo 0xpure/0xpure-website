@@ -16,7 +16,7 @@ function MainContent() {
     }, 3000);
 
     const timer = setInterval(() => {
-      if (window.matchMedia("only screen and (max-width: 760px)").matches) {
+      if (window.matchMedia("only screen and (max-width: 900px)").matches) {
         setHidden("hidden");
       } else {
         setHidden("");
@@ -32,7 +32,7 @@ function MainContent() {
         currentOpacity ? "opacity-100" : "opacity-0 absolute"
       }`}
     >
-      <div className="flex flex-row xl:text-4xl 2xl:text-5xl md:text-xs sm:text-sm 3xl:text-8xl text-vanilla xl:pt-14 md:pt-5">
+      <div className="flex flex-row xl:text-4xl 2xl:text-5xl md:text-xl sm:text-sm 3xl:text-8xl text-vanilla xl:pt-14 md:pt-5">
         <div
           className="m-5 pt-2 cursor-pointer hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-1 before:origin-right before:transition-transform before:duration-500 before:scale-x-0 before:bg-vanilla before:absolute before:bottom-0"
           onClick={() => setFragment(<About />)}

@@ -30,10 +30,9 @@ const AboutMobile = () => {
   const springs = useSpring({
     height: "90%",
     from: { height: "0%" },
-    config: { duration: 1000 },
+    config: { duration: 500 },
   });
 
-  // Содержимое, которое нужно анимировать
   const content = [
     "Name: " + randomString + ".",
     "Age: 17.",
@@ -44,12 +43,11 @@ const AboutMobile = () => {
     "Personal story: I started my journey into programming by mastering Python as the most mainstream language at that time, after familiarizing myself with the Django/Flask frameworks and others, I decided to switch to full-stack development, which I continue to do to this day.",
   ];
 
-  // Используем useTrail для создания анимации для каждого элемента массива
   const trail = useTrail(content.length, {
-    opacity: 1, // Начальная непрозрачность
-    transform: "translateY(0px)", // Начальное положение
-    from: { opacity: 0, transform: "translateY(20px)" }, // Конечные значения
-    config: { mass: 1, tension: 500, friction: 30 }, // Настройки анимации
+    opacity: 1, 
+    transform: "translateY(0px)", 
+    from: { opacity: 0, transform: "translateY(20px)" },
+    config: { mass: 1, tension: 500, friction: 30 },
   });
 
   return (

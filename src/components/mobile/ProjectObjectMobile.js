@@ -19,7 +19,6 @@ function ProjectMobile() {
     from: { width: "0%" },
     config: { duration: 1000 },
     opacity: isVisible ? 1 : 0,
-    // config: { duration: 1000 },
   });
 
   return (

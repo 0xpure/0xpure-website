@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import avatar from "../img/avatar3.jpg";
+import avatar from "./img/avatar4.jpg";
 import { useState, useEffect } from "react";
 
 const AboutMobile = React.lazy(() => import("./mobile/AboutMobile"));
@@ -15,7 +15,7 @@ function UserBlog() {
     "xl:w-52 xl:h-52 2xl:w-60 2xl:h-60 md:w-24 md:h-24 3xl:w-80 3xl:h-80 sm:w-24 sm:h-24 w-20 h-20"
   );
   const [mobileFragment, setMobileFragment] = useState("");
-  const [randomString, setRandomString] = useState("");
+
 
   const fonts = [
     "font-Poppins",
@@ -38,19 +38,20 @@ function UserBlog() {
     }, 2000);
 
     const timer = setInterval(() => {
-      if (window.matchMedia("only screen and (max-width: 760px)").matches) {
+      if (window.matchMedia("only screen and (max-width: 900px)").matches) {
         setMobile(true);
         setMobileWidth("w-full p-3");
         setMobileImage("w-28 h-28");
+        // eslint-disable-next-line no-unused-expressions
         setCurrentFont["font-Poppins"];
       } else {
         setMobile(false);
         setMobileWidth("w-1/4 p-8");
         setMobileImage(
-          "xl:w-52 xl:h-52 2xl:w-60 2xl:h-60 md:w-24 md:h-24 3xl:w-80 3xl:h-80 sm:w-24 sm:h-24 w-20 h-20"
+          "xl:w-52 xl:h-52 2xl:w-60 2xl:h-60 md:w-44 md:h-44 3xl:w-80 3xl:h-80 sm:w-36 sm:h-36 w-24 h-24"
         );
       }
-      if (isMobile == true) {
+      if (isMobile === true) {
         const randomIndex = Math.floor(Math.random() * fonts.length);
         setCurrentFont(fonts[randomIndex]);
       }
@@ -112,19 +113,19 @@ function UserBlog() {
           : "absolute xl:translate-x-[150%] lg:translate-x-[100%] sm:translate-x-[150%] "
       }`}
     >
-      <div className="flex">
+      <div className="flex w-full justify-center">
         <img
           src={avatar}
-          alt="That not me, just an image"
+          alt="avatar"
           className={`${isMobileImage} rounded-full`}
         ></img>
       </div>
 
-      <div>
+      <div className="flex w-full justify-center">
         <span
           className={`flex ${currentFont} ${
             isMobile ? "font-bold" : "font-bold"
-          } xl:text-2xl 2xl:text-3xl md:text-xs sm:text-sm 3xl:text-6xl text-base mt-5 text-black-blue-dark`}
+          } xl:text-2xl 2xl:text-3xl md:text-base sm:text-sm 3xl:text-6xl text-base mt-5 text-black-blue-dark`}
         >
           pureheroky
         </span>
@@ -132,7 +133,7 @@ function UserBlog() {
 
       <div>
         <span
-          className={`flex xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-4xl text-sm font-Poppins font-normal m-3 text-center`}
+          className={`flex xl:text-xl 2xl:text-2xl md:text-base sm:text-xs 3xl:text-4xl text-sm font-Poppins font-normal m-3 text-center`}
         >
           17 y.o Fullstack/Python software developer
         </span>
@@ -141,7 +142,7 @@ function UserBlog() {
       <MobileFragmentFunction />
 
       <div className="flex flex-col h-full justify-end items-center">
-        <span className="xl:text-2xl 2xl:text-3xl md:text-xs sm:text-sm 3xl:text-5xl text-base font-Poppins font-bold">
+        <span className="xl:text-2xl 2xl:text-3xl md:text-base sm:text-sm 3xl:text-5xl text-base font-Poppins font-bold">
           socials:
         </span>
         <div className="font-Poppins font-thin flex flex-col">
@@ -150,14 +151,14 @@ function UserBlog() {
             <a
               href="https://github.com/pureheroky"
               target="_blank"
-              className="pl-2"
+              className="pl-2" rel="noreferrer"
             >
               github.com/pureheroky
             </a>
           </span>
           <span className="flex hover:font-extrabold justify-center xl:text-xl 2xl:text-2xl md:text-xs sm:text-xs 3xl:text-2xl text-xs">
             Telegram:
-            <a href="https://t.me/psychopure" target="_blank" className="pl-2">
+            <a href="https://t.me/psychopure" target="_blank" className="pl-2" rel="noreferrer">
               t.me/pureheroky
             </a>
           </span>
@@ -172,7 +173,7 @@ function UserBlog() {
             <a
               href="mailto:pureheroky@gmail.com"
               target="_blank"
-              className="pl-2"
+              className="pl-2" rel="noreferrer"
             >
               pureheroky
             </a>

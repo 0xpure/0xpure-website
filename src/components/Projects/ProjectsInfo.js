@@ -1,8 +1,9 @@
-import pr1 from "./pr1.png";
-import pr2 from "./pr2.png";
-import pr3 from "./pr3.png";
-import pr4 from "./pr4.png";
-import pr5 from "./pr5.png";
+import pr1 from "./pr1-min.png";
+import pr2 from "./pr2-min.png";
+import pr3 from "./pr3-min.png";
+import pr4 from "./pr4-min.png";
+import pr5 from "./pr5-min.png";
+import pr6 from "./pr6-min.png";
 
 const ProjectList = {
   pr1: [
@@ -36,7 +37,7 @@ const ProjectList = {
     "Minecraft plugin written using spigot. The plugin will be responsible for server logistics, etc. \n\nOnce completed, here will be the server address in the game",
   ],
   pr4: [
-    "Telegram bot",
+    "Telegram bot (Python)",
     "https://github.com/pureheroky/tgpythonbot",
     pr4,
     "complete",
@@ -54,6 +55,27 @@ const ProjectList = {
     undefined,
     "28.10.2023",
     "Website for one author from Russia.\nThe site is a page with books, clicking on which opens the page of the selected book. On the book page you can see its description, introductory chapter, and sometimes a trailer. There are also pages with support and contacts. ",
+  ],
+  pr6: [
+    "Telegram bot (golang)",
+    "https://github.com/pureheroky/tg-golang-bot",
+    pr6,
+    "complete",
+    6,
+    null,
+    "21.12.2023",
+    "Copy of telegram bot written on python... but on golang now.",
+  ],
+
+  pr7: [
+    "Chat application (c# WPF / golang)",
+    "https://github.com/pureheroky/chat-app-go",
+    pr6,
+    "in develop",
+    7,
+    undefined,
+    "27.12.2023",
+    "Chat application, built on C# WPF as the frontend of the application and golang on the backend.\nCan be used to send messages or photos, requiring login/registration.\none of my most ambitious projects\n\nP.S It is not yet known whether a server will be allocated for this app.",
   ],
 };
 
