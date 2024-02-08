@@ -44,7 +44,7 @@ function About() {
             <span className="italic">{randomString}</span> .
           </span>
           <span>
-            <span className="font-bold mr-2">Age:</span> 17.
+            <span className="font-bold mr-2">Age:</span> 18.
           </span>
           <span>
             <span className="font-bold mr-2">Hometown:</span> Penza, Russia.

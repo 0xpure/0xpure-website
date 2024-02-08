@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import avatar from "./img/avatar4.png";
+import avatar from "./img/avatar5.png";
 import { useState, useEffect } from "react";
 
 const AboutMobile = React.lazy(() => import("./mobile/AboutMobile"));
@@ -135,7 +135,7 @@ function UserBlog() {
         <span
           className={`flex xl:text-xl 2xl:text-2xl md:text-base sm:text-xs 3xl:text-4xl text-sm font-Poppins font-normal m-3 text-center`}
         >
-          17 y.o Fullstack/Python software developer
+          18 y.o Fullstack/Python software developer
         </span>
       </div>
 

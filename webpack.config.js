@@ -1,5 +1,4 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -9,7 +8,6 @@ module.exports = {
     maxEntrypointSize: 1024000,
     maxAssetSize: 1024000,
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./public/index.html" })],
   module: {
     rules: [
       {
@@ -33,6 +31,10 @@ module.exports = {
         exclude: /node_modules/,
         loader: "file-loader",
       },
+      {
+        test: /\.html$/,
+        use: "file-loader",
+      },
       // {
       //     test: /.html$/,
       //     loader: "html-loader",
@@ -47,13 +49,13 @@ module.exports = {
     },
   },
   output: {
-    path: path.resolve(__dirname, "public/"),
+    path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
     // publicPath: "auto",
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, "public/"),
+      directory: path.join(__dirname, "build"),
     },
     compress: true,
     port: 9000,

@@ -28,6 +28,7 @@ const skills = [
   "Pandas",
   "Numpy",
   "Requests",
+  "Electron"
 ];
 
 export default skills;
